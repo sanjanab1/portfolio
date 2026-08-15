@@ -7,35 +7,32 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
-  },
 }
 
 export function Navbar() {
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
-      <div className="lg:sticky lg:top-20">
-        <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-          id="nav"
-        >
-          <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
-                <Link
-                  key={path}
-                  href={path}
-                  className="font-display text-primary/90 transition-colors hover:text-primary flex align-middle relative py-1 px-2 m-1"
-                >
-                  {name}
-                </Link>
-              )
-            })}
-          </div>
-        </nav>
-        <div className="sprocket-strip h-3 w-full mt-2" />
-      </div>
-    </aside>
+    <header className="sticky top-0 z-40 mb-16 border-b border-border bg-background/95 backdrop-blur">
+      <nav className="flex items-center justify-between gap-6 px-6 md:px-10 py-5 font-mono text-xs tracking-[0.25em] uppercase">
+        <Link href="/" className="text-foreground font-bold shrink-0">
+          My Portfolio
+        </Link>
+
+        <div className="hidden md:flex items-center gap-8">
+          {Object.entries(navItems).map(([path, { name }]) => (
+            <Link
+              key={path}
+              href={path}
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              {name}
+            </Link>
+          ))}
+        </div>
+
+        <span className="text-muted-foreground shrink-0 hidden sm:inline">
+          ISO 400 · 35MM
+        </span>
+      </nav>
+    </header>
   )
 }
