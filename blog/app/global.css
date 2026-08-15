@@ -1,37 +1,181 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
 
-::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root block defines the actual color values using oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+  --color-film-cream: var(--film-cream);
+  --color-film-sprocket: var(--film-sprocket);
 }
 
 :root {
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  --radius: 0.125rem;
+  --background: oklch(0.17 0.012 60);
+  --foreground: oklch(0.93 0.024 85);
+  --card: oklch(0.21 0.014 62);
+  --card-foreground: oklch(0.93 0.024 85);
+  --popover: oklch(0.21 0.014 62);
+  --popover-foreground: oklch(0.93 0.024 85);
+  --primary: oklch(0.72 0.15 62);
+  --primary-foreground: oklch(0.17 0.012 60);
+  --secondary: oklch(0.26 0.017 64);
+  --secondary-foreground: oklch(0.93 0.024 85);
+  --muted: oklch(0.24 0.014 64);
+  --muted-foreground: oklch(0.66 0.022 78);
+  --accent: oklch(0.55 0.16 28);
+  --accent-foreground: oklch(0.95 0.02 85);
+  --destructive: oklch(0.55 0.19 28);
+  --destructive-foreground: oklch(0.95 0.02 85);
+  --border: oklch(0.32 0.016 66);
+  --input: oklch(0.32 0.016 66);
+  --ring: oklch(0.72 0.15 62);
+  --film-cream: oklch(0.93 0.024 85);
+  --film-sprocket: oklch(0.13 0.01 60);
+  --gradient-vignette: radial-gradient(
+    ellipse at 50% 30%,
+    oklch(0.26 0.02 66) 0%,
+    oklch(0.15 0.012 60) 70%
+  );
+  --shadow-halation: 0 0 60px -10px oklch(0.72 0.15 62 / 0.35);
+  --font-display: 'Bodoni Moda', Georgia, serif;
+  --font-mono: 'Courier Prime', ui-monospace, monospace;
+
+  --sh-class: var(--primary);
+  --sh-identifier: var(--foreground);
+  --sh-sign: var(--muted-foreground);
+  --sh-string: oklch(0.65 0.13 160);
+  --sh-keyword: var(--accent);
+  --sh-comment: var(--muted-foreground);
+  --sh-jsxliterals: var(--primary);
+  --sh-property: oklch(0.72 0.15 62);
+  --sh-entity: oklch(0.72 0.15 62);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
+@layer base {
+  * {
+    border-color: var(--color-border);
   }
+
   html {
+    min-width: 360px;
     color-scheme: dark;
   }
+
+  body {
+    background-color: var(--color-background);
+    background-image: var(--gradient-vignette);
+    background-attachment: fixed;
+    color: var(--color-foreground);
+    font-family: var(--font-mono);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
 }
 
-html {
-  min-width: 360px;
+@utility grain {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
 }
+
+@utility sprocket-strip {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 14px,
+    var(--film-cream) 14px 30px,
+    transparent 30px 44px
+  );
+  opacity: 0.18;
+}
+
+@utility sprocket-rail {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  z-index: 50;
+  pointer-events: none;
+  background-color: var(--film-sprocket);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 10px,
+    var(--film-cream) 10px 26px,
+    transparent 26px 44px
+  );
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: 8px 44px;
+  opacity: 0.85;
+}
+
+.sprocket-rail-left {
+  left: 0;
+}
+
+.sprocket-rail-right {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .sprocket-rail {
+    display: none;
+  }
+}
+
+
+/* Prose / MDX content */
 
 .prose .anchor {
   @apply absolute invisible no-underline;
@@ -48,11 +192,12 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all underline-offset-2 decoration-[0.1em];
+  text-decoration-color: var(--color-primary);
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
+  color: var(--color-muted-foreground);
   content: '#';
 }
 
@@ -61,15 +206,19 @@ html {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply rounded-sm overflow-x-auto py-2 px-3 text-sm border;
+  background-color: var(--color-card);
+  border-color: var(--color-border);
 }
 
 .prose code {
-  @apply px-1 py-0.5 rounded-lg;
+  @apply px-1 py-0.5 rounded-sm;
+  background-color: var(--color-card);
 }
 
 .prose pre code {
   @apply p-0;
+  background-color: transparent;
   border: initial;
   line-height: 1.5;
 }
@@ -84,7 +233,8 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-4;
+  color: var(--color-foreground);
 }
 
 .prose h1 {
