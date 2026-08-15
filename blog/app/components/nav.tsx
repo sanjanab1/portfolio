@@ -26,7 +26,7 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
+                  className="font-display text-primary/90 transition-colors hover:text-primary flex align-middle relative py-1 px-2 m-1"
                 >
                   {name}
                 </Link>
@@ -34,6 +34,7 @@ export function Navbar() {
             })}
           </div>
         </nav>
+        <div className="sprocket-strip h-3 w-full mt-2" />
       </div>
     </aside>
   )
