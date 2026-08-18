@@ -47,15 +47,15 @@
 
 :root {
   --radius: 0.125rem;
-  --background: oklch(0.17 0.012 60);
+  --background: oklch(15.096% 0.0192 288.951);
   --foreground: oklch(0.93 0.024 85);
-  --card: oklch(0.21 0.014 62);
+  --card: oklch(18.789% 0.02228 284.048);
   --card-foreground: oklch(0.93 0.024 85);
-  --popover: oklch(0.21 0.014 62);
+  --popover: oklch(18.9% 0.0222 288.235);
   --popover-foreground: oklch(0.93 0.024 85);
   --primary: oklch(0.72 0.15 62);
   --primary-foreground: oklch(0.17 0.012 60);
-  --secondary: oklch(0.26 0.017 64);
+  --secondary: oklch(23.327% 0.02687 284.121);
   --secondary-foreground: oklch(0.93 0.024 85);
   --muted: oklch(0.24 0.014 64);
   --muted-foreground: oklch(0.66 0.022 78);
@@ -63,17 +63,17 @@
   --accent-foreground: oklch(0.95 0.02 85);
   --destructive: oklch(0.55 0.19 28);
   --destructive-foreground: oklch(0.95 0.02 85);
-  --border: oklch(0.32 0.016 66);
+  --border: oklch(29.268% 0.02716 287.637);
   --input: oklch(0.32 0.016 66);
   --ring: oklch(0.72 0.15 62);
   --film-cream: oklch(0.93 0.024 85);
   --film-sprocket: oklch(0.13 0.01 60);
   --gradient-vignette: radial-gradient(
     ellipse at 50% 30%,
-    oklch(0.26 0.02 66) 0%,
-    oklch(0.15 0.012 60) 70%
+    oklch(22.653% 0.03282 283.469) 0%,
+    oklch(12.802% 0.02135 282.969) 70%
   );
-  --shadow-halation: 0 0 60px -10px oklch(0.72 0.15 62 / 0.35);
+  --shadow-halation: 0 0 60px -10px oklch(46.627% 0.25898 273.37 / 0.35);
   --font-display: 'Bodoni Moda', Georgia, serif;
   --font-mono: 'Courier Prime', ui-monospace, monospace;
 
