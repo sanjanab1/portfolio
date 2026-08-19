@@ -74,8 +74,8 @@
     oklch(12.802% 0.02135 282.969) 70%
   );
   --shadow-halation: 0 0 60px -10px oklch(46.627% 0.25898 273.37 / 0.35);
-  --font-display: 'Bodoni Moda', Georgia, serif;
-  --font-mono: 'Courier Prime', ui-monospace, monospace;
+  --font-display: 'Rubik Puddles', Georgia, serif;
+  --font-mono: 'Share Tech', Courier, monospace;
 
   --sh-class: var(--primary);
   --sh-identifier: var(--foreground);

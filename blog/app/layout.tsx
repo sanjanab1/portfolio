@@ -1,21 +1,22 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { Bodoni_Moda, Courier_Prime } from 'next/font/google'
+import { Rubik_Puddles, Share_Tech } from 'next/font/google'
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 
-const bodoniModa = Bodoni_Moda({
+const rubikPuddles = Rubik_Puddles({
   subsets: ['latin'],
+  weight: '400',
   variable: '--font-display',
   display: 'swap',
 })
 
-const courierPrime = Courier_Prime({
+const shareTech = Share_Tech({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: '400',
   variable: '--font-mono',
   display: 'swap',
 })
@@ -58,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx('dark', bodoniModa.variable, courierPrime.variable)}
+      className={cx('dark', rubikPuddles.variable, shareTech.variable)}
     >
       <body className="antialiased grain relative">
         <div className="sprocket-rail sprocket-rail-left" aria-hidden="true" />
