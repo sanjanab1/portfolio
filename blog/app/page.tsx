@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Page() {
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-16 md:py-24">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 items-right py-16 md:py-10">
         <div>
           <p className="font-mono text-xs tracking-[0.3em] text-primary uppercase mb-6">
             Roll 01 — Frame 01 - INTRO
