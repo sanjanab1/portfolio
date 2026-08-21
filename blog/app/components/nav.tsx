@@ -4,8 +4,8 @@ const navItems = {
   '/': {
     name: 'home',
   },
-  '/blog': {
-    name: 'blog',
+  '/projects': {
+    name: 'projects',
   },
 }
 
@@ -30,7 +30,6 @@ export function Navbar() {
         </div>
 
         <span className="text-muted-foreground shrink-0 hidden sm:inline">
-          ISO 400 · 35MM
         </span>
       </nav>
     </header>

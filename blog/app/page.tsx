@@ -11,7 +11,7 @@ export default function Page() {
             Roll 01 — Frame 01 - INTRO
           </p>
           <h1 className="font-display text-5xl md:text-2xl leading-[1.05] tracking-tight text-foreground">
-            <TextScramble className="font-display" duration={2000} replayIntervalMs={11000}>
+            <TextScramble className="font-display" duration={1000} replayIntervalMs={20000}>
               WELCOME!
             </TextScramble>
             <br />{' '}

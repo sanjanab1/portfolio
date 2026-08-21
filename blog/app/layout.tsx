@@ -1,20 +1,20 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { Rubik_Puddles, Share_Tech } from 'next/font/google'
+import { Bitcount_Ink, DM_Mono, Silkscreen} from 'next/font/google'
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 
-const rubikPuddles = Rubik_Puddles({
+const silkscreen = Silkscreen({
   subsets: ['latin'],
   weight: '400',
   variable: '--font-display',
   display: 'swap',
 })
 
-const shareTech = Share_Tech({
+const dmMono = DM_Mono({
   subsets: ['latin'],
   weight: '400',
   variable: '--font-mono',
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx('dark', rubikPuddles.variable, shareTech.variable)}
+      className={cx('dark', silkscreen.variable, dmMono.variable)}
     >
       <body className="antialiased grain relative">
         <div className="sprocket-rail sprocket-rail-left" aria-hidden="true" />
