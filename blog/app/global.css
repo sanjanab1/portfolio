@@ -74,8 +74,8 @@
     oklch(12.802% 0.02135 282.969) 70%
   );
   --shadow-halation: 0 0 60px -10px oklch(46.627% 0.25898 273.37 / 0.35);
-  --font-display: 'Rubik Puddles', Georgia, serif;
-  --font-mono: 'Share Tech', Courier, monospace;
+  --font-display: 'Silkscreen', Georgia, serif;
+  --font-mono: 'DM_Mono', Courier, monospace;
 
   --sh-class: var(--primary);
   --sh-identifier: var(--foreground);
@@ -297,4 +297,24 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 3px black halftone dot grid spaced 16px apart */
+  background-image: radial-gradient(rgba(0, 0, 0, 0.8) 15%, transparent 16%);
+  background-size: 16px 16px;
+  /* subtle blend */
+  opacity: 0.50; 
+  pointer-events: none; 
+  z-index: 1; 
+}
+body > * {
+  position: relative;
+  z-index: 2;
 }
