@@ -47,7 +47,7 @@
 
 :root {
   --radius: 0.125rem;
-  --background: oklch(15.096% 0.0192 288.951);
+  --background: rgb(29 25 48);
   --foreground: oklch(0.93 0.024 85);
   --card: oklch(18.789% 0.02228 284.048);
   --card-foreground: oklch(0.93 0.024 85);
@@ -70,8 +70,8 @@
   --film-sprocket: oklch(0.13 0.01 60);
   --gradient-vignette: radial-gradient(
     ellipse at 50% 30%,
-    oklch(22.653% 0.03282 283.469) 0%,
-    oklch(12.802% 0.02135 282.969) 70%
+    oklch(25.686% 0.06938 283.96) 0%,
+    oklch(10% 0.02 60) 90%
   );
   --shadow-halation: 0 0 60px -10px oklch(46.627% 0.25898 273.37 / 0.35);
   --font-display: 'Silkscreen', Georgia, serif;
@@ -116,6 +116,18 @@
     background-color: var(--color-primary);
     color: var(--color-primary-foreground);
   }
+}
+
+@utility pixel-box {
+  border-radius: 0;
+  border: 3px solid var(--color-foreground);
+  box-shadow: 6px 6px 0 0 var(--color-primary);
+}
+
+@utility pixel-box-sm {
+  border-radius: 0;
+  border: 2px solid var(--color-foreground);
+  box-shadow: 4px 4px 0 0 var(--color-primary);
 }
 
 @utility grain {
