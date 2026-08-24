@@ -36,7 +36,14 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 flex flex-col items-center gap-6">
+      <section id="projects" className="py-16">
+        <h2 className="pixel-box inline-block bg-card px-4 py-2 font-display text-2xl tracking-tight text-foreground">
+          Projects
+        </h2>
+        {/* Add your project cards/list here */}
+      </section>
+
+      <section id="connect" className="py-16 flex flex-col items-center gap-6">
         <h2 className="pixel-box inline-block bg-card px-4 py-2 font-display text-2xl tracking-tight text-foreground">
           Let&apos;s connect
         </h2>
