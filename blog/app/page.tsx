@@ -37,17 +37,17 @@ export default function Page() {
       </section>
 
       <section id="projects" className="py-16">
-        <h2 className="pixel-box inline-block bg-card px-4 py-2 font-display text-2xl tracking-tight text-foreground">
-          Projects
+        <h2 className="font-display tracking-tight text-foreground">
+          PROJECTS
         </h2>
         {/* Add your project cards/list here */}
       </section>
 
-      <section id="connect" className="py-16 flex flex-col items-center gap-6">
-        <h2 className="pixel-box inline-block bg-card px-4 py-2 font-display text-2xl tracking-tight text-foreground">
-          Let&apos;s connect
+      <section id="connect" className="py-16">
+        <h2 className="font-display tracking-tight text-foreground">
+          LET&apos;S CONNECT!
         </h2>
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-right justify-right">
           {socials.map((social) => (
             <Button key={social.name} asChild size="lg">
               <a href={social.href} target="_blank" rel="noopener noreferrer">
