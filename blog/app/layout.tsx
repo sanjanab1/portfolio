@@ -1,11 +1,19 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { Bitcount_Ink, DM_Mono, Silkscreen} from 'next/font/google'
+import { Bitcount_Ink, DM_Mono, Silkscreen, Press_Start_2P} from 'next/font/google'
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+
+const pressStart2P = Press_Start_2P({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-display',
+  display: 'swap',
+})
+
 
 const silkscreen = Silkscreen({
   subsets: ['latin'],
@@ -59,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx('dark', silkscreen.variable, dmMono.variable)}
+      className={cx('dark', pressStart2P.variable, dmMono.variable)}
     >
       <body className="antialiased grain relative">
         <div className="sprocket-rail sprocket-rail-left" aria-hidden="true" />
