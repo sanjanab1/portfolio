@@ -43,37 +43,39 @@
   --font-mono: var(--font-mono);
   --color-film-cream: var(--film-cream);
   --color-film-sprocket: var(--film-sprocket);
+  --color-link: var(--link);
 }
 
 :root {
   --radius: 0.125rem;
-  --background: oklch(0.19 0.025 264);
-  --foreground: oklch(0.94 0.02 85);
-  --card: oklch(0.23 0.028 264);
-  --card-foreground: oklch(0.94 0.02 85);
+  --background: oklch(0% 0 0);
+  --foreground: rgb(90, 90, 122);
+  --card: oklch(17.008% 0.0876 298.773);
+  --card-foreground: rgb(130, 117, 143);
   --popover: oklch(0.23 0.028 264);
   --popover-foreground: oklch(0.94 0.02 85);
-  --primary: oklch(0.72 0.15 62);
+  --primary: oklch(51.882% 0.2516 294.363);
   --primary-foreground: oklch(0.17 0.012 60);
-  --secondary: oklch(0.28 0.03 264);
+  --secondary: oklch(27.158% 0.04411 305.589);
   --secondary-foreground: oklch(0.94 0.02 85);
   --muted: oklch(0.26 0.026 264);
   --muted-foreground: oklch(0.68 0.02 264);
-  --accent: oklch(0.6 0.14 200);
+  --accent: oklch(88.328% 0.19592 161.273);
   --accent-foreground: oklch(0.15 0.02 264);
   --destructive: oklch(0.58 0.19 28);
   --destructive-foreground: oklch(0.95 0.02 85);
-  --border: oklch(0.34 0.03 264);
-  --input: oklch(0.34 0.03 264);
-  --ring: oklch(0.72 0.15 62);
+  --border: oklch(33.052% 0.0435 303.171);
+  --input: oklch(32.836% 0.04294 299.316);
+  --ring: oklch(52.317% 0.25187 295.816);
   --film-cream: oklch(0.94 0.02 85);
   --film-sprocket: oklch(0.13 0.01 60);
+  --link: oklch(0.68 0.24 340);
   --gradient-vignette: radial-gradient(
     ellipse at 50% 30%,
-    oklch(0.25 0.035 264) 0%,
-    oklch(0.14 0.02 264) 90%
+    oklch(12.48% 0.05982 298.637) 0%,
+    rgb(8 8 11) 30%
   );
-  --shadow-halation: 0 0 60px -10px oklch(0.72 0.15 62 / 0.35);
+  --shadow-halation: 0 0 60px -10px oklch(55.111% 0.25521 304.313 / 0.35);
   --font-display: 'Press_Start_2P', Georgia, serif;
   --font-mono: 'DM_Mono', Courier, monospace;
 
@@ -84,8 +86,8 @@
   --sh-keyword: var(--accent);
   --sh-comment: var(--muted-foreground);
   --sh-jsxliterals: var(--primary);
-  --sh-property: oklch(0.72 0.15 62);
-  --sh-entity: oklch(0.72 0.15 62);
+  --sh-property: oklch(52.649% 0.25212 296.901);
+  --sh-entity: oklch(52.649% 0.25212 296.901);
 }
 
 @layer base {
@@ -120,14 +122,50 @@
 
 @utility pixel-box {
   border-radius: 0;
-  border: 3px solid var(--color-foreground);
+  border: 3px solid var(--color-card-foreground);
   box-shadow: 6px 6px 0 0 var(--color-primary);
 }
 
 @utility pixel-box-sm {
   border-radius: 0;
-  border: 2px solid var(--color-foreground);
+  border: 2px solid var(--color-card-foreground);
   box-shadow: 4px 4px 0 0 var(--color-primary);
+}
+
+@utility terminal-box {
+  position: relative;
+  border-radius: 0;
+  border: 1px solid var(--color-accent);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 22px) 0,
+    100% 22px,
+    100% 100%,
+    0 100%
+  );
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(
+      135deg,
+      transparent 50%,
+      var(--color-accent) 50%
+    );
+    opacity: 0.6;
+  }
+}
+
+@utility terminal-scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    oklch(1 0 0 / 0.03) 0 1px,
+    transparent 1px 3px
+  );
 }
 
 @utility grain {
@@ -319,8 +357,8 @@ body::before {
   width: 100%;
   height: 100%;
   /* 3px black halftone dot grid spaced 16px apart */
-  background-image: radial-gradient(rgba(0, 0, 0, 0.8) 15%, transparent 16%);
-  background-size: 16px 16px;
+  background-image: radial-gradient(rgba(35, 31, 45, 0.8) 10%, transparent 10%);
+  background-size: 10px 10px;
   /* subtle blend */
   opacity: 0.50; 
   pointer-events: none; 
