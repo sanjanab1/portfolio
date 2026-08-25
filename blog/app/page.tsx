@@ -62,7 +62,7 @@ export default function Page() {
   return (
     <>
       <section className="grid grid-cols-1 md:grid-cols-4 gap-10 items-center py-16 md:py-10">
-        <div className="pixel-box relative mx-auto aspect-square w-[45%] md:w-full overflow-hidden bg-card">
+        <div className="pixel-box relative mx-auto aspect-square w-[25%] md:w-full overflow-hidden bg-card">
           <Image
             src="/images/profile-1.png"
             alt="pixel self-portrait"

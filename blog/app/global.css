@@ -73,7 +73,7 @@
   --gradient-vignette: radial-gradient(
     ellipse at 50% 30%,
     oklch(12.48% 0.05982 298.637) 0%,
-    rgb(8 8 11) 30%
+    rgb(8 8 11) 50%
   );
   --shadow-halation: 0 0 60px -10px oklch(55.111% 0.25521 304.313 / 0.35);
   --font-display: 'Press_Start_2P', Georgia, serif;
@@ -122,14 +122,14 @@
 
 @utility pixel-box {
   border-radius: 0;
-  border: 3px solid var(--color-card-foreground);
-  box-shadow: 6px 6px 0 0 var(--color-primary);
+  border: 2px solid var(--color-card-foreground);
+  box-shadow: 3px 3px 0 0 var(--color-primary);
 }
 
 @utility pixel-box-sm {
   border-radius: 0;
-  border: 3px solid var(--color-accent);
-  box-shadow: 5px 5px 0 0 var(--color-link);
+  border: 1px solid var(--color-accent);
+  box-shadow: 3px 3px 0 0 var(--color-link);
 }
 
 @utility terminal-box {
