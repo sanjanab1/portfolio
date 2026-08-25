@@ -10,7 +10,7 @@ export type Project = {
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="terminal-box terminal-scanlines relative flex flex-col gap-6 bg-card p-6">
+    <div className="group terminal-box terminal-scanlines relative flex flex-col gap-6 bg-card p-6 hover:border-accent">
       <div className="flex items-start justify-between">
         <span className="font-mono text-sm text-muted-foreground">[{project.number}]</span>
         <span className="flex items-center gap-1.5 font-mono text-xs tracking-widest text-accent">
@@ -46,7 +46,7 @@ export function ProjectCard({ project }: { project: Project }) {
           href={project.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-sm font-bold tracking-widest text-link transition-opacity hover:opacity-80"
+          className="font-mono text-sm font-bold tracking-widest text-foreground transition-colors group-hover:text-link hover:opacity-80"
         >
           VIEW &gt;&gt;
         </a>
