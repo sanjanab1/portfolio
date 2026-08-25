@@ -1,6 +1,7 @@
 import { TextScramble } from '@/components/core/text-scramble'
 import { Button } from '@/app/components/ui/button'
-import { ProjectCard, type Project } from '@/app/components/project-card'
+import { type Project } from '@/app/components/project-card'
+import { ProjectCarousel } from '@/app/components/project-carousel'
 import Image from 'next/image'
 
 const socials = [
@@ -30,6 +31,24 @@ const projects: Project[] = [
   },
   {
     number: '03',
+    name: 'Project Name',
+    description: 'Short one to two sentence summary of what this project does and why you built it.',
+    date: 'Month YYYY',
+    tech: ['Tech', 'Tech', 'Tech'],
+    status: 'live',
+    href: 'https://example.com',
+  },
+  {
+    number: '04',
+    name: 'Project Name',
+    description: 'Short one to two sentence summary of what this project does and why you built it.',
+    date: 'Month YYYY',
+    tech: ['Tech', 'Tech', 'Tech'],
+    status: 'wip',
+    href: 'https://example.com',
+  },
+  {
+    number: '05',
     name: 'Project Name',
     description: 'Short one to two sentence summary of what this project does and why you built it.',
     date: 'Month YYYY',
@@ -71,11 +90,7 @@ export default function Page() {
         <h2 className="mb-8 font-display tracking-tight text-foreground">
           PROJECTS
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.number} project={project} />
-          ))}
-        </div>
+        <ProjectCarousel projects={projects} />
       </section>
 
       <section id="connect" className="py-16">

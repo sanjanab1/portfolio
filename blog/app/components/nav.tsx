@@ -4,12 +4,12 @@ const navItems = {
   '/': {
     name: 'home',
   },
-  '/#projects': {
+  '/projects': {
     name: 'projects',
   },
-  '/#connect': {
+  '/connect': {
     name: 'connect',
-  },
+  }
 }
 
 export function Navbar() {
@@ -24,7 +24,7 @@ export function Navbar() {
             <Link
               key={path}
               href={path}
-              className="pixel-box-sm bg-card px-4 py-2 font-display text-muted-foreground transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:text-primary active:translate-x-0 active:translate-y-0 active:shadow-none"
+              className="pixel-box-sm bg-card px-2 py-1.5 font-display text-muted-foreground transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:text-primary active:translate-x-0 active:translate-y-0 active:shadow-none"
             >
               {name}
             </Link>

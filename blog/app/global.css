@@ -50,11 +50,11 @@
   --radius: 0.125rem;
   --background: oklch(0% 0 0);
   --foreground: rgb(90, 90, 122);
-  --card: oklch(17.008% 0.0876 298.773);
+  --card: oklch(17.778% 0.03352 224.425);
   --card-foreground: rgb(130, 117, 143);
   --popover: oklch(0.23 0.028 264);
   --popover-foreground: oklch(0.94 0.02 85);
-  --primary: oklch(51.882% 0.2516 294.363);
+  --primary: oklch(45.035% 0.211 295.418);
   --primary-foreground: oklch(0.17 0.012 60);
   --secondary: oklch(27.158% 0.04411 305.589);
   --secondary-foreground: oklch(0.94 0.02 85);
@@ -128,8 +128,8 @@
 
 @utility pixel-box-sm {
   border-radius: 0;
-  border: 2px solid var(--color-card-foreground);
-  box-shadow: 4px 4px 0 0 var(--color-primary);
+  border: 3px solid var(--color-accent);
+  box-shadow: 5px 5px 0 0 var(--color-link);
 }
 
 @utility terminal-box {
