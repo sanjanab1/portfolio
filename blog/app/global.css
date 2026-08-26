@@ -88,6 +88,7 @@
   --sh-jsxliterals: var(--primary);
   --sh-property: oklch(52.649% 0.25212 296.901);
   --sh-entity: oklch(52.649% 0.25212 296.901);
+  --box-color: rgb(169, 58, 58); 
 }
 
 @layer base {
@@ -122,8 +123,8 @@
 
 @utility pixel-box {
   border-radius: 0;
-  border: 2px solid var(--color-card-oreground);
-  box-shadow: 1px 1px 0 0 var(--color-primary);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 2px 2px 0 0 var(--color-accent);
 }
 
 @utility pixel-box-sm {

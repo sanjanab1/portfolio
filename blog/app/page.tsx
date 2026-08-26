@@ -61,8 +61,12 @@ const projects: Project[] = [
 export default function Page() {
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-10 items-center py-16 md:py-10">
-        <div className="pixel-box relative mx-auto aspect-square w-[25%] md:w-full overflow-hidden bg-card">
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-0 md:gap-15 items-center py-16 md:py-10"> 
+        {/*grid container that shows 1 col by default on mobile/small screen*/}
+        {/*change to 4 cols on bigger screens, space of 10 gap, align items in center and vertical tabbing*/}
+        <div className="pixel-box relative ml-auto mr-0 hidden md:block aspect-square w-[50%] overflow-hidden bg-card">
+          {/*pixel box for retro aesthetic, child elements use absolute positioning within*/}
+          {/*force square set width, set width to full width, apply a background color*/}
           <Image
             src="/images/profile-1.png"
             alt="pixel self-portrait"
@@ -72,7 +76,7 @@ export default function Page() {
           />
         </div>
 
-        <div className="md:col-span-3">
+        <div className="md:col-full">
           <h1 className="font-display text-accent text-base md:text-base leading-[1.05] tracking-tight">
             <TextScramble className="font-display" duration={1000} replayIntervalMs={20000}>
               WELCOME!
