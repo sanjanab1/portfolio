@@ -73,9 +73,9 @@ export default function Page() {
         </div>
 
         <div className="md:col-span-3">
-          <h1 className="font-display text-accent text-1xl md:text-2xl leading-[1.05] tracking-tight">
+          <h1 className="font-display text-accent text-base md:text-base leading-[1.05] tracking-tight">
             <TextScramble className="font-display" duration={1000} replayIntervalMs={20000}>
-              SANJANA_BHUPATHI
+              WELCOME!
             </TextScramble>
           </h1>
           <p className="mt-6 max-w-md text-foreground/80">
@@ -100,7 +100,12 @@ export default function Page() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           {socials.map((social) => (
             <Button key={social.name} asChild size="lg">
-              <a href={social.href} target="_blank" rel="noopener noreferrer">
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-accent"
+              >
                 {social.name}
               </a>
             </Button>
