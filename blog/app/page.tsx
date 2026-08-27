@@ -13,48 +13,76 @@ const socials = [
 const projects: Project[] = [
   {
     number: '01',
-    name: 'Project Name',
-    description: 'Short one to two sentence summary of what this project does and why you built it.',
-    date: 'Month YYYY',
-    tech: ['Tech', 'Tech', 'Tech'],
-    status: 'live',
+    name: 'AI Lead Qualification Agent',
+    description: 'An autonomous agent that ingests CRM lead data through accounts and emails, and evaluates qualifications against custom scoring criteria using web search and company intelligence.',
+    date: 'JULY 2026 - ',
+    tech: ['Python', 'Next.js', 'Supabase', 'Hubspot', 'Claude API'],
+    status: 'WIP',
     href: 'https://example.com',
+    comingSoon: true,
   },
   {
     number: '02',
-    name: 'Project Name',
-    description: 'Short one to two sentence summary of what this project does and why you built it.',
-    date: 'Month YYYY',
-    tech: ['Tech', 'Tech', 'Tech'],
-    status: 'wip',
-    href: 'https://example.com',
+    name: 'Brand Intelligence Social Media Classifier',
+    description: 'An end-to-end NLP pipeline to process 10,000+ Reddit posts into structured, actionable insights for enterprise customers.',
+    date: 'JAN 2026 - MAY 2026',
+    tech: ['Python', 'Typescript', 'React', 'Vercel', 'OpenAI API', 'Huggingface', 'AWS', 'GCP'],
+    status: 'LIVE',
+    href: 'https://unwrap-classifier-web.vercel.app/',
   },
   {
     number: '03',
-    name: 'Project Name',
-    description: 'Short one to two sentence summary of what this project does and why you built it.',
-    date: 'Month YYYY',
-    tech: ['Tech', 'Tech', 'Tech'],
-    status: 'live',
-    href: 'https://example.com',
+    name: 'FLOW',
+    description: 'A CLI tool that snapshots active IDE files and browser tabs into portable project context bundles, cutting context-switching overhead for developers working across multi-repo environments. Built at LA Hacks.',
+    date: 'APR 2026',
+    tech: ['Python', 'Typescript', 'Chrome Debugging Protocol', 'Express', 'Node.js', 'Gemini API'],
+    status: 'LIVE',
+    href: 'https://github.com/natashaj13/flow',
   },
   {
     number: '04',
-    name: 'Project Name',
-    description: 'Short one to two sentence summary of what this project does and why you built it.',
-    date: 'Month YYYY',
-    tech: ['Tech', 'Tech', 'Tech'],
-    status: 'wip',
-    href: 'https://example.com',
+    name: 'AccessiBILL',
+    description: 'A full-stack civic tech platform that transforms dense legislative text into personalized impact summaries. Built over 24 hours at UCSB\'s Datathon.',
+    date: 'FEB 2026',
+    tech: ['Python', 'Typescript', 'OCR', 'React', 'FastAPI', 'Render'],
+    status: 'LIVE',
+    href: 'https://github.com/sanjanab1/accessiBILL',
   },
   {
     number: '05',
-    name: 'Project Name',
-    description: 'Short one to two sentence summary of what this project does and why you built it.',
-    date: 'Month YYYY',
-    tech: ['Tech', 'Tech', 'Tech'],
+    name: 'AI Chat + Document Summarizer',
+    description: 'An AI chat service enabling natural-language querying over CrossNoKaye\'s PDF documents.',
+    date: 'October 2025',
+    tech: ['Python', 'Typescript', 'LangChain', 'Next.js', 'Vercel', 'OpenAI API'],
     status: 'live',
-    href: 'https://example.com',
+    href: 'https://github.com/acm-industry/crossnokaye-document-summarizer',
+  },
+  {
+    number: '06',
+    name: 'Portfolio',
+    description: 'Portfolio showcasing my dev work!',
+    date: 'JUNE 2026 - ',
+    tech: ['Typescript', 'HTML', 'CSS','Vercel'],
+    status: 'live',
+    href: 'https://github.com/sanjanab1/portfolio',
+  },
+  {
+    number: '07',
+    name: 'Pomodoro',
+    description: 'Simple customizable Pomodoro timer with enabled desktop notifications.',
+    date: 'JULY 2026 - ',
+    tech: ['Typescript', 'HTML', 'CSS', 'Vercel'],
+    status: 'WIP',
+    href: 'https://github.com/sanjanab1/smart-pomodoro',
+  },
+  {
+    number: '08',
+    name: 'To Do List App',
+    description: 'Customizable to-do list app for iOS and macOS.',
+    date: 'APR 2026 - ',
+    tech: ['Swift', 'SwiftUI'],
+    status: 'WIP',
+    href: 'https://github.com/sanjanab1/todolist',
   },
 ]
 
@@ -85,17 +113,16 @@ export default function Page() {
               WELCOME!
             </TextScramble>
           </h1>
-          <p className="mt-6 max-w-md text-foreground/80">
-            {`Hi! My name is Sanjana. I'm a 3rd year CS student at UC Santa Barbara, and I enjoy machine learning and computer vision.
-            In my spare time, I enjoy biking, watching movies, and playing Minecraft! Look around to see some of my work
-            and check out my socials.`}
+          <p className="mt-6 max-w-md text-foreground/80 md:text-xs">
+            {`Hi! My name is Sanjana, and I'm a 3rd year CS student at UC Santa Barbara.
+             I'm particularly interested in machine learning and computer vision. Look around to check out my work!`}
           </p>
         </div>
       </section>
 
       <section id="projects" className="py-16">
         <p className="mb-2 font-pixel text-[10px] tracking-widest text-accent">[LEVEL_02]</p>
-        <h2 className="mb-8 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+        <h2 className="mb-8 font-display text-xl md:text-xl font-semibold tracking-tight text-foreground">
           Projects
         </h2>
         <ProjectCarousel projects={projects} />
@@ -103,7 +130,7 @@ export default function Page() {
 
       <section id="connect" className="py-16">
         <p className="mb-2 font-pixel text-[10px] tracking-widest text-accent">[LEVEL_03]</p>
-        <h2 className="mb-8 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+        <h2 className="mb-8 font-display text-xl md:text-xl font-semibold tracking-tight text-foreground">
           Let&apos;s Connect!
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-4">

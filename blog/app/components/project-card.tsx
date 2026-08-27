@@ -4,8 +4,9 @@ export type Project = {
   description: string
   date: string
   tech: string[]
-  status: 'live' | 'wip'
+  status: 'live' | 'wip' | 'LIVE' | 'WIP'
   href: string
+  comingSoon?: boolean
 }
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -15,7 +16,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <span className="font-mono text-sm text-muted-foreground">[{project.number}]</span>
         <span className="flex items-center gap-1.5 font-mono text-xs tracking-widest text-accent">
           <span aria-hidden="true">/</span>
-          {project.status === 'live' ? 'LIVE' : 'WIP'}
+          {project.status.toUpperCase() === 'LIVE' ? 'LIVE' : 'WIP'}
         </span>
       </div>
 
@@ -42,14 +43,28 @@ export function ProjectCard({ project }: { project: Project }) {
 
       <div className="mt-auto flex items-center justify-between pt-2">
         <span className="font-mono text-sm text-muted-foreground">{project.date}</span>
-        <a
-          href={project.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-mono text-sm font-bold tracking-widest text-foreground transition-colors group-hover:text-link hover:opacity-80"
-        >
-          VIEW &gt;&gt;
-        </a>
+        {project.comingSoon ? (
+          <span
+            role="button"
+            aria-disabled="true"
+            title="Coming Soon!"
+            className="group/view relative font-mono text-sm font-bold tracking-widest text-muted-foreground"
+          >
+            VIEW &gt;&gt;
+            <span className="pointer-events-none absolute -top-8 right-0 whitespace-nowrap bg-card border border-accent px-2 py-1 text-xs text-accent opacity-0 transition-opacity group-hover/view:opacity-100">
+              Coming Soon!
+            </span>
+          </span>
+        ) : (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-sm font-bold tracking-widest text-foreground transition-colors group-hover:text-link hover:opacity-80"
+          >
+            VIEW &gt;&gt;
+          </a>
+        )}
       </div>
     </div>
   )
