@@ -44,39 +44,41 @@
   --color-film-cream: var(--film-cream);
   --color-film-sprocket: var(--film-sprocket);
   --color-link: var(--link);
+  --font-pixel: var(--font-pixel);
 }
 
 :root {
   --radius: 0.125rem;
-  --background: oklch(0% 0 0);
-  --foreground: rgb(123, 107, 140);
-  --card: oklch(17.778% 0.03352 224.425);
-  --card-foreground: rgb(10, 28, 35);
-  --popover: oklch(0.23 0.028 264);
-  --popover-foreground: oklch(0.94 0.02 85);
-  --primary: oklch(25.535% 0.06019 300.985);
-  --primary-foreground: oklch(0.17 0.012 60);
-  --secondary: oklch(27.158% 0.04411 305.589);
-  --secondary-foreground: oklch(0.94 0.02 85);
-  --muted: oklch(0.26 0.026 264);
-  --muted-foreground: oklch(0.68 0.02 264);
-  --accent: oklch(39.261% 0.04085 171.741);
-  --accent-foreground: oklch(0.15 0.02 264);
+  --background: oklch(0.14 0.012 200);
+  --foreground: oklch(0.88 0.015 200);
+  --card: oklch(0.19 0.016 200);
+  --card-foreground: oklch(0.88 0.015 200);
+  --popover: oklch(0.19 0.016 200);
+  --popover-foreground: oklch(0.88 0.015 200);
+  --primary: oklch(0.62 0.1 175);
+  --primary-foreground: oklch(0.14 0.012 200);
+  --secondary: oklch(0.24 0.018 200);
+  --secondary-foreground: oklch(0.88 0.015 200);
+  --muted: oklch(0.22 0.016 200);
+  --muted-foreground: oklch(0.62 0.02 200);
+  --accent: oklch(0.68 0.11 175);
+  --accent-foreground: oklch(0.14 0.012 200);
   --destructive: oklch(0.58 0.19 28);
   --destructive-foreground: oklch(0.95 0.02 85);
-  --border: oklch(33.052% 0.0435 303.171);
-  --input: oklch(32.836% 0.04294 299.316);
-  --ring: oklch(52.317% 0.25187 295.816);
+  --border: oklch(0.3 0.02 200);
+  --input: oklch(0.3 0.02 200);
+  --ring: oklch(0.62 0.1 175);
   --film-cream: oklch(0.94 0.02 85);
   --film-sprocket: oklch(0.13 0.01 60);
-  --link: oklch(41.71% 0.1137 250.187);
+  --link: oklch(0.68 0.11 175);
   --gradient-vignette: radial-gradient(
     ellipse at 50% 30%,
-    oklch(12.48% 0.05982 298.637) 0%,
-    rgb(8 8 11) 50%
+    oklch(0.18 0.016 200) 0%,
+    oklch(0.1 0.01 200) 60%
   );
-  --shadow-halation: 0 0 60px -10px oklch(55.111% 0.25521 304.313 / 0.35);
-  --font-display: 'Press_Start_2P', Georgia, serif;
+  --shadow-halation: 0 0 60px -10px oklch(0.68 0.11 175 / 0.3);
+  --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: 'Press_Start_2P', monospace;
   --font-mono: 'DM_Mono', Courier, monospace;
 
   --sh-class: var(--primary);
@@ -86,9 +88,8 @@
   --sh-keyword: var(--accent);
   --sh-comment: var(--muted-foreground);
   --sh-jsxliterals: var(--primary);
-  --sh-property: oklch(52.649% 0.25212 296.901);
-  --sh-entity: oklch(52.649% 0.25212 296.901);
-  --box-color: rgb(169, 58, 58); 
+  --sh-property: oklch(0.62 0.1 175);
+  --sh-entity: oklch(0.62 0.1 175);
 }
 
 @layer base {
@@ -123,14 +124,14 @@
 
 @utility pixel-box {
   border-radius: 0;
-  border: 1px solid var(--color-secondary);
-  box-shadow: 2px 2px 0 0 var(--color-accent);
+  border: 1px solid var(--color-border);
+  box-shadow: 3px 3px 0 0 var(--color-accent);
 }
 
 @utility pixel-box-sm {
   border-radius: 0;
-  border: 1px solid var(--color-card-foreground);
-  box-shadow: 1px 1px 0 0 var(--color-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: 2px 2px 0 0 var(--color-accent);
 }
 
 @utility terminal-box {

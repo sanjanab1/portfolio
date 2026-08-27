@@ -77,8 +77,11 @@ export default function Page() {
         </div>
 
         <div className="md:col-full">
-          <h1 className="font-display text-accent text-base md:text-base leading-[1.05] tracking-tight">
-            <TextScramble className="font-display" duration={1000} replayIntervalMs={20000}>
+          <p className="mb-3 font-pixel text-[10px] tracking-widest text-accent">
+            [PLAYER_01]
+          </p>
+          <h1 className="font-display text-foreground text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tight">
+            <TextScramble className="font-pixel text-2xl md:text-3xl text-accent" duration={1000} replayIntervalMs={20000}>
               WELCOME!
             </TextScramble>
           </h1>
@@ -91,15 +94,17 @@ export default function Page() {
       </section>
 
       <section id="projects" className="py-16">
-        <h2 className="mb-8 font-display tracking-tight text-foreground">
-          PROJECTS
+        <p className="mb-2 font-pixel text-[10px] tracking-widest text-accent">[LEVEL_02]</p>
+        <h2 className="mb-8 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+          Projects
         </h2>
         <ProjectCarousel projects={projects} />
       </section>
 
       <section id="connect" className="py-16">
-        <h2 className="font-display tracking-tight text-foreground">
-          LET&apos;S CONNECT!
+        <p className="mb-2 font-pixel text-[10px] tracking-widest text-accent">[LEVEL_03]</p>
+        <h2 className="mb-8 font-display text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+          Let&apos;s Connect!
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-4">
           {socials.map((social) => (
