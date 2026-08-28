@@ -52,7 +52,7 @@ export function ProjectCard({ project }: { project: Project }) {
           >
             VIEW &gt;&gt;
             <span className="pointer-events-none absolute -top-8 right-0 whitespace-nowrap bg-card border border-accent px-2 py-1 text-xs text-accent opacity-0 transition-opacity group-hover/view:opacity-100">
-              Coming Soon!
+              COMING SOON!
             </span>
           </span>
         ) : (
