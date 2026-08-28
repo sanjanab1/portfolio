@@ -4,12 +4,12 @@ const navItems = {
   '/': {
     name: 'home',
   },
-  '/projects': {
+  '/#projects': {
     name: 'projects',
   },
-  '/connect': {
+  '/#connect': {
     name: 'connect',
-  }
+  },
 }
 
 export function Navbar() {

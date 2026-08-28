@@ -50,15 +50,24 @@ const projects: Project[] = [
   },
   {
     number: '05',
+    name: 'Real Estate Property Search Platform',
+    description: 'A real estate property search website with filtering and sorting capabilities for 40k+ records.',
+    date: 'JAN 2026 - APR 2026',
+    tech: ['Python', 'Typescript', 'React', 'Render', 'Docker', 'MySQL'],
+    status: 'LIVE',
+    href: 'https://github.com/sanjanab1/idx-property-search',
+  },
+  {
+    number: '06',
     name: 'AI Chat + Document Summarizer',
     description: 'An AI chat service enabling natural-language querying over CrossNoKaye\'s PDF documents.',
-    date: 'October 2025',
+    date: 'OCT 2025 - NOV 2025',
     tech: ['Python', 'Typescript', 'LangChain', 'Next.js', 'Vercel', 'OpenAI API'],
     status: 'live',
     href: 'https://github.com/acm-industry/crossnokaye-document-summarizer',
   },
   {
-    number: '06',
+    number: '07',
     name: 'Portfolio',
     description: 'Portfolio showcasing my dev work!',
     date: 'JUNE 2026 - ',
@@ -67,22 +76,24 @@ const projects: Project[] = [
     href: 'https://github.com/sanjanab1/portfolio',
   },
   {
-    number: '07',
+    number: '08',
     name: 'Pomodoro',
     description: 'Simple customizable Pomodoro timer with enabled desktop notifications.',
     date: 'JULY 2026 - ',
     tech: ['Typescript', 'HTML', 'CSS', 'Vercel'],
     status: 'WIP',
-    href: 'https://github.com/sanjanab1/smart-pomodoro',
+    href: 'https://example.com',
+    comingSoon: true,
   },
   {
-    number: '08',
+    number: '09',
     name: 'To Do List App',
     description: 'Customizable to-do list app for iOS and macOS.',
     date: 'APR 2026 - ',
     tech: ['Swift', 'SwiftUI'],
     status: 'WIP',
-    href: 'https://github.com/sanjanab1/todolist',
+    href: 'https://example.com',
+    comingSoon: true,
   },
 ]
 
@@ -114,7 +125,7 @@ export default function Page() {
             </TextScramble>
           </h1>
           <p className="mt-6 max-w-md text-foreground/80 md:text-xs">
-            {`Hi! My name is Sanjana, and I'm a 3rd year CS student at UC Santa Barbara.
+            {`Hi! My name is Sanjana, and I'm a 3rd year computer science student at UC Santa Barbara.
              I'm particularly interested in machine learning and computer vision. Look around to check out my work!`}
           </p>
         </div>
