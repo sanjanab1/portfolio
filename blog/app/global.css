@@ -360,7 +360,7 @@ body::before {
   width: 100%;
   height: 100%;
   /* 3px black halftone dot grid spaced 16px apart */
-  background-image: radial-gradient(rgba(35, 31, 45, 0.8) 10%, transparent 10%);
+  background-image: radial-gradient(rgba(54, 48, 76, 0.8) 10%, transparent 10%);
   background-size: 10px 10px;
   /* subtle blend */
   opacity: 0.50; 
