@@ -30,15 +30,15 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Sanjana\'s Portfolio',
+    template: '%s | Sanjana\'s Portfolio',
   },
-  description: 'This is my portfolio.',
+  description: 'sanjana\'s portfolio.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Sanjana\'s Portfolio',
+    description: 'sanjana\'s portfolio.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Sanjana\'s Portfolio',
     locale: 'en_US',
     type: 'website',
   },
