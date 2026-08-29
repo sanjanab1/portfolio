@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     number: '01',
     name: 'AI Lead Qualification Agent',
-    description: 'An autonomous agent that ingests CRM lead data through accounts and emails, and evaluates qualifications against custom scoring criteria using web search and company intelligence.',
+    description: 'An autonomous agent that ingests CRM lead data and evaluates qualifications.',
     date: 'JULY 2026 - ',
     tech: ['Python', 'Next.js', 'Supabase', 'Hubspot', 'Claude API'],
     status: 'WIP',
@@ -24,7 +24,7 @@ const projects: Project[] = [
   {
     number: '02',
     name: 'Brand Intelligence Social Media Classifier',
-    description: 'An end-to-end NLP pipeline to process 10,000+ Reddit posts into structured, actionable insights for enterprise customers.',
+    description: 'An end-to-end NLP pipeline to process 10,000+ Reddit posts into structured, actionable feedback.',
     date: 'JAN 2026 - MAY 2026',
     tech: ['Python', 'Typescript', 'React', 'Vercel', 'OpenAI API', 'Huggingface', 'AWS', 'GCP'],
     status: 'LIVE',
@@ -33,7 +33,7 @@ const projects: Project[] = [
   {
     number: '03',
     name: 'FLOW',
-    description: 'A CLI tool that snapshots active IDE files and browser tabs into portable project context bundles, cutting context-switching overhead for developers working across multi-repo environments. Built at LA Hacks.',
+    description: 'A CLI tool that snapshots active IDE files and browser tabs into portable project context bundles. Built at LA Hacks.',
     date: 'APR 2026',
     tech: ['Python', 'Typescript', 'Chrome Debugging Protocol', 'Express', 'Node.js', 'Gemini API'],
     status: 'LIVE',
@@ -42,7 +42,7 @@ const projects: Project[] = [
   {
     number: '04',
     name: 'AccessiBILL',
-    description: 'A full-stack civic tech platform that transforms dense legislative text into personalized impact summaries. Built over 24 hours at UCSB\'s Datathon.',
+    description: 'A full-stack civic tech platform that transforms dense legislation into personalized impact summaries. Built at UCSB\'s Datathon.',
     date: 'FEB 2026',
     tech: ['Python', 'Typescript', 'OCR', 'React', 'FastAPI', 'Render'],
     status: 'LIVE',
@@ -50,8 +50,8 @@ const projects: Project[] = [
   },
   {
     number: '05',
-    name: 'Real Estate Property Search Platform',
-    description: 'A real estate property search website with filtering and sorting capabilities for 40k+ records.',
+    name: 'Real Estate Property Search',
+    description: 'A search platform with filtering, sorting, and saving capabilities for 40k+ properties.',
     date: 'JAN 2026 - APR 2026',
     tech: ['Python', 'Typescript', 'React', 'Render', 'Docker', 'MySQL'],
     status: 'LIVE',
@@ -60,7 +60,7 @@ const projects: Project[] = [
   {
     number: '06',
     name: 'AI Chat + Document Summarizer',
-    description: 'An AI chat service enabling natural-language querying over CrossNoKaye\'s PDF documents.',
+    description: 'An AI chat service enabling natural-language querying over enterprise PDF documents.',
     date: 'OCT 2025 - NOV 2025',
     tech: ['Python', 'Typescript', 'LangChain', 'Next.js', 'Vercel', 'OpenAI API'],
     status: 'live',
@@ -103,7 +103,7 @@ export default function Page() {
       <section className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-0 md:gap-15 items-center py-16 md:py-10"> 
         {/*grid container that shows 1 col by default on mobile/small screen*/}
         {/*change to 4 cols on bigger screens, space of 10 gap, align items in center and vertical tabbing*/}
-        <div className="pixel-box relative ml-auto mr-0 hidden md:block aspect-square w-[50%] overflow-hidden bg-card">
+        <div className="pixel-box relative ml-auto mr-0 hidden md:block aspect-square w-[50%] overflow-hidden bg-primary-foreground">
           {/*pixel box for retro aesthetic, child elements use absolute positioning within*/}
           {/*force square set width, set width to full width, apply a background color*/}
           <Image
