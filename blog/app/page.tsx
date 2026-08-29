@@ -5,9 +5,9 @@ import { ProjectCarousel } from '@/app/components/project-carousel'
 import Image from 'next/image'
 
 const socials = [
-  { name: 'GitHub', href: 'https://github.com/yourusername' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
-  { name: 'Email', href: 'mailto:you@example.com' },
+  { name: 'GitHub', href: 'https://github.com/sanjanab1' },
+  { name: 'LinkedIn', href: 'https://linkedin.com/in/sanjanabhupathi' },
+  { name: 'Email', href: 'mailto:bhsanjana26@gmail.com' },
 ]
 
 const projects: Project[] = [
