@@ -117,7 +117,7 @@ export default function Page() {
 
         <div className="md:col-full">
           <p className="mb-3 font-pixel text-[10px] tracking-widest text-accent">
-            [PLAYER_01]
+            [START_HERE]
           </p>
           <h1 className="font-display text-foreground text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tight">
             <TextScramble className="font-pixel text-2xl md:text-3xl text-accent" duration={1000} replayIntervalMs={20000}>
@@ -132,18 +132,12 @@ export default function Page() {
       </section>
 
       <section id="projects" className="py-16">
-        <p className="mb-2 font-pixel text-[10px] tracking-widest text-accent">[LEVEL_02]</p>
-        <h2 className="mb-8 font-display text-xl md:text-xl font-semibold tracking-tight text-foreground">
-          Projects
-        </h2>
+        <p className="mb-4 font-pixel text-[10px] tracking-widest text-accent">[PROJECTS]</p>
         <ProjectCarousel projects={projects} />
       </section>
 
       <section id="connect" className="py-16">
-        <p className="mb-2 font-pixel text-[10px] tracking-widest text-accent">[LEVEL_03]</p>
-        <h2 className="mb-8 font-display text-xl md:text-xl font-semibold tracking-tight text-foreground">
-          Let&apos;s Connect!
-        </h2>
+        <p className="mb-4 font-pixel text-[10px] tracking-widest text-accent">[CONNECT_WITH_ME!]</p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           {socials.map((social) => (
             <Button key={social.name} asChild size="lg">
