@@ -55,7 +55,7 @@ const projects: Project[] = [
     date: 'JAN 2026 - APR 2026',
     tech: ['Python', 'Typescript', 'React', 'Render', 'Docker', 'MySQL'],
     status: 'LIVE',
-    href: 'https://github.com/sanjanab1/idx-property-search',
+    href: 'https://idx-property-search.onrender.com/',
   },
   {
     number: '06',
